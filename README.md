@@ -1,2 +1,3 @@
-# nnt-project
+# nnt
+
 Advanced CSS and Sass practice
