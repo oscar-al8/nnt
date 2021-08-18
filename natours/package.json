@@ -1,0 +1,16 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Advance CSS and Sass practice",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "dev": "concurrently \"npm run compile:sass\" \"live-server\""
+  },
+  "author": "Oscar Alvarado",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "node-sass": "^6.0.1"
+  }
+}
