@@ -11,7 +11,18 @@
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
+
+  --shadow-dark: 0 2rem 5rem rgba(0, 0, 0, 0.5);
+
+  --line: 1px solid var(--color-grey-light-4);
 }
+
+$bp-large: 75em; //1200px
+$bp-medium: 68.75em; //1100px
+$bp-small: 56.25em; //900px
+$bp-phone: 37.5em; //600px
+$bp-phone-medium: 31.25em; //500px
+$bp-phone-small: 23.125em; //370px
 
 * {
   margin: 0;
@@ -27,11 +38,16 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px, 10px/16px(browsers defeault) = 62.5%
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%;
+  }
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  font-size: 1.4rem;
   line-height: 1.6;
   color: var(--color-grey-dark-2);
   background-image: linear-gradient(
