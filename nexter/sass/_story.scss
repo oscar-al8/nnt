@@ -2,10 +2,42 @@
   &__pictures {
     background-color: $color-primary;
     grid-column: full-start / col-end 4;
+    display: grid;
+    align-items: center;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    background-image: linear-gradient(
+        rgba($color-primary, 0.5),
+        rgba($color-primary, 0.5)
+      ),
+      url(../img/back.jpg);
+  }
+
+  &__img-1 {
+    width: 100%;
+    grid-area: 2 / 2 / 6 / 6;
+    box-shadow: 0 2rem 5rem rgba(#000, 0.4);
+  }
+
+  &__img-2 {
+    width: 115%;
+    z-index: 2;
+    grid-area: 4 / 4 / 6 / 7;
+    box-shadow: 0 2rem 5rem rgba(#000, 0.6);
   }
 
   &__content {
     background-color: $color-grey-light-1;
     grid-column: col-start 5 / full-end;
+    padding: 6rem 8vw;
+    display: grid;
+    align-content: center;
+    justify-items: start;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 4rem;
   }
 }
