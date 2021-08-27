@@ -6,17 +6,27 @@
     align-items: center;
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(6, 1fr);
+    background-size: cover;
     background-image: linear-gradient(
         rgba($color-primary, 0.5),
         rgba($color-primary, 0.5)
       ),
       url(../img/back.jpg);
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1 / -1;
+      padding: 6rem;
+    }
   }
 
   &__img-1 {
     width: 100%;
     grid-area: 2 / 2 / 6 / 6;
     box-shadow: 0 2rem 5rem rgba(#000, 0.4);
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-area: 1 / 1 / -1 / 5;
+    }
   }
 
   &__img-2 {
@@ -24,6 +34,11 @@
     z-index: 2;
     grid-area: 4 / 4 / 6 / 7;
     box-shadow: 0 2rem 5rem rgba(#000, 0.6);
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+      grid-row: 1 / -1;
+    }
   }
 
   &__content {
@@ -33,6 +48,10 @@
     display: grid;
     align-content: center;
     justify-items: start;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-area: 5 / 1 / 6 / -1;
+    }
   }
 
   &__text {
